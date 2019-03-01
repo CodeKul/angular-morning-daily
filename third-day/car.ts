@@ -1,6 +1,6 @@
 
 // why this class is needed ?
-class Car {
+export class Car {
     // state
     // wheel
 
@@ -18,9 +18,9 @@ class Car {
     }*/
 
     constructor(
-        private wheel: number,
-        private lights: number,
-        private name: string
+        private wheel: number = 4, 
+        private lights: number = 4,
+        private name: string = 'car'
     ) { }
 
     mvFwd() {
@@ -38,3 +38,5 @@ cr.mvFwd()
 cr.mvBk()
 
 new Car(56)
+
+
