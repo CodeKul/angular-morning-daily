@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-md-12">
+    Experience is {{exp}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    {{smTxt}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    {{ 45*89 }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="{{typ}}" >
+  </div>
+</div>
+<div class="row" [style.border]="'1px solid red'">
+  <div class="col-md-12">
+    <input [type]="'text'">
+    <input [type]="typ">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div [class.alert]="true" [class.alert-info]="true" [attr.role]="'alert'">This is simple class</div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="button" value="Okay" class="btn btn-primary" (click)="myFn()">
+  </div>
+</div>
+<div class="row" [class]="al">
+  <div class="col-md-12">
+    This is some othertext
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="button" value="Primary" class="btn btn-primary" (click)="myAl(1)">
+    <input type="button" value="Info" class="btn btn-primary" (click)="myAl(2)">
+    <input type="button" value="Danger" class="btn btn-primary" (click)="myAl(3)">
+  </div>
+</div>
