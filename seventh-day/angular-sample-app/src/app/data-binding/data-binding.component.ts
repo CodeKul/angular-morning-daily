@@ -32,4 +32,12 @@ export class DataBindingComponent {
       this.al = 'alert alert-danger'
     }
   }
+  myCh(evDt : any) {
+    console.log(evDt)
+    if(evDt.length < 10 || evDt.length > 10) {
+      this.al = 'alert alert-danger'
+    } else {
+      this.al = 'alert alert-info'
+    }
+  }
 }

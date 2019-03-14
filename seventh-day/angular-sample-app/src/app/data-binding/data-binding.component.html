@@ -15,7 +15,7 @@
 </div>
 <div class="row">
   <div class="col-md-12">
-    <input type="{{typ}}" >
+    <input type="{{typ}}">
   </div>
 </div>
 <div class="row" [style.border]="'1px solid red'">
@@ -39,6 +39,18 @@
     This is some othertext
   </div>
 </div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" placeholder="Enter Alert Class" [(ngModel)]="al"> {{al}}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [ngModel]="smTxt" (ngModelChange)="myCh($event)">
+  </div>
+</div>
+
 <div class="row">
   <div class="col-md-12">
     <input type="button" value="Primary" class="btn btn-primary" (click)="myAl(1)">
