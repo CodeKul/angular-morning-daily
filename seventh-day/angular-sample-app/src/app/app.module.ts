@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { InfoBoxComponent } from './info-box/info-box.component';
 import { SimpleBoxComponent } from './info-box/simple-box.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { MyJumboComponent } from './my-jumbo/my-jumbo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InfoBoxComponent,
     SimpleBoxComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    MyJumboComponent
   ],
   imports: [
     BrowserModule,

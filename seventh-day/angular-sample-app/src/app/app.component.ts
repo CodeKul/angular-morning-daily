@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })//decorator
 export class AppComponent {
   title = 'angular-sample-app';
+
+  jmbFn(ttl : string) {
+    this.title = ttl
+  }
 }

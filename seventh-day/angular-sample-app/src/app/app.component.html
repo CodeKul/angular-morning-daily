@@ -1,3 +1,20 @@
 <div class="container">
-  <app-data-binding></app-data-binding>
+  <!-- <app-data-binding></app-data-binding> -->
+  <div class="row">
+    <div class="col-md-12">
+      <p class="alert alert-info">{{title}}</p>
+    </div>
+  </div>
+  <app-my-jumbo [ttl]="'Jumbotron'"
+    [infTxt]="'A lightweight, flexible component that can optionally extend the entire viewport to showcase key marketing messages on your site.'"
+    [acTxt]="'It uses utility classes for typography and spacing to space content out within the larger container.'"
+    (more)="jmbFn($event)">
+  </app-my-jumbo>
+
+  <app-my-jumbo [ttl]="'Carousel'"
+    [infTxt]="'A slideshow component for cycling through elements—images or slides of text—like a carousel.'"
+    [acTxt]="'Lastly, if you’re building our JavaScript from source, it requires util.js.'"
+    (more)="jmbFn($event)">
+  </app-my-jumbo>
+
 </div>
