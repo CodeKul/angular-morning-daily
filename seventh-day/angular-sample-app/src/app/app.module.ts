@@ -7,6 +7,9 @@ import { InfoBoxComponent } from './info-box/info-box.component';
 import { SimpleBoxComponent } from './info-box/simple-box.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { MyJumboComponent } from './my-jumbo/my-jumbo.component';
+import { InterComponentCommunicationV1Component } from './inter-component-communication-v1/inter-component-communication-v1.component';
+import { ColorPickerComponent } from './inter-component-communication-v1/color-picker.component';
+import { ColorResultComponent } from './inter-component-communication-v1/color-result.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { MyJumboComponent } from './my-jumbo/my-jumbo.component';
     InfoBoxComponent,
     SimpleBoxComponent,
     DataBindingComponent,
-    MyJumboComponent
+    MyJumboComponent,
+    InterComponentCommunicationV1Component,
+    ColorPickerComponent,
+    ColorResultComponent
   ],
   imports: [
     BrowserModule,

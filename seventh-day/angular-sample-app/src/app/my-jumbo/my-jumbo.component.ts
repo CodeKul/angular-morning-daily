@@ -25,6 +25,11 @@ export class MyJumboComponent implements OnInit {
   }
 
   lnMr() {
-    this.more.emit(this.ttl)
+    let infoObj = {
+      infTtl : this.ttl,
+      infTxt :this.infTxt,
+      acTxt : this.acTxt
+    }
+    this.more.emit(infoObj)
   }
 }

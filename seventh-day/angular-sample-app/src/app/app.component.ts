@@ -6,9 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })//decorator
 export class AppComponent {
+  recObj: {}
   title = 'angular-sample-app';
 
-  jmbFn(ttl : string) {
-    this.title = ttl
+  selectedColor : DropEvent = {} as DropEvent
+
+  jmbFn(evObj: {}) {
+    this.recObj = evObj
   }
+
+  onColorPicked(ev : DropEvent) {
+    this.selectedColor = ev
+  }
+}
+
+export interface DropEvent {
+  position: number
+  color: string
 }

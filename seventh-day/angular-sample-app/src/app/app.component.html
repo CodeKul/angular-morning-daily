@@ -1,8 +1,8 @@
 <div class="container">
   <!-- <app-data-binding></app-data-binding> -->
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-md-12">
-      <p class="alert alert-info">{{title}}</p>
+      <p class="alert alert-info">{{recObj?.infTtl}} => {{recObj?.infTxt}}</p>
     </div>
   </div>
   <app-my-jumbo [ttl]="'Jumbotron'"
@@ -15,6 +15,21 @@
     [infTxt]="'A slideshow component for cycling through elements—images or slides of text—like a carousel.'"
     [acTxt]="'Lastly, if you’re building our JavaScript from source, it requires util.js.'"
     (more)="jmbFn($event)">
-  </app-my-jumbo>
+  </app-my-jumbo> -->
+
+
+  <div class="row">
+    <div class="col-md-4">
+      <app-color-picker (picked)="onColorPicked($event)">
+      </app-color-picker>
+    </div>
+    <div class="col-md-4">
+      Position - {{ selectedColor.position }} Color - {{selectedColor.color}}
+    </div>
+    <div class="col-md-4">
+      <app-color-result [myColor]="selectedColor.color">
+      </app-color-result>
+    </div>
+  </div>
 
 </div>
