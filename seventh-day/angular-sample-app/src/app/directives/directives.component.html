@@ -1,0 +1,65 @@
+<div class="row" [ngClass]="myCls">
+  <div class="col-md-12">
+    <p>Welcome to directives</p>
+  </div>
+</div>
+<div class="row" [ngStyle]="{border : '1px solid red'}">
+  <div class="col-md-12">
+    <p>Welcome to directives</p>
+  </div>
+</div>
+<!-- <div class="row">
+  <div class="col-md-12">
+    <div class="dropdown" drp (em)="onDrpClick($event)">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Dropdown button
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" [class.show]="sh">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+  </div> -->
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="dropdown" drp>
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Dropdown button
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <ol>
+      <li *ngFor="let mb of mobs">{{mb.cmp}} => {{mb.pz}}</li>
+    </ol>
+  </div>
+</div>
+<div class="row" *ngIf="sh">
+  <div class="col-md-12">
+    <p class="alert alert-info">This is android system</p>
+  </div>
+</div>
+<ng-template>
+  <div class="row" [ngIf]="sh">
+    <div class="col-md-12">
+      <p class="alert alert-info">This is android system</p>
+    </div>
+  </div>
+</ng-template>
+
+<div class="row" *ctmStr="sh">
+  <div class="col-md-12">
+    <p class="alert alert-info">This is custom str</p>
+  </div>
+</div>

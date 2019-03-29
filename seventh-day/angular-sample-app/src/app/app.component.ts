@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   recObj: {}
   title = 'angular-sample-app';
+  isSh = false;
 
   selectedColor : DropEvent = {} as DropEvent
 
