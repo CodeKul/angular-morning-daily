@@ -14,6 +14,7 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { DrpDirective } from './directives/drp.directive';
 import { CtmStrDirective } from './directives/ctm-str.directive';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CtmStrDirective } from './directives/ctm-str.directive';
     LifecycleComponent,
     DirectivesComponent,
     DrpDirective,
-    CtmStrDirective
+    CtmStrDirective,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
