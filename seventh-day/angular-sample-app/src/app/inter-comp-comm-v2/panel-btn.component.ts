@@ -1,3 +1,4 @@
+import { DataService } from './../services/data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -14,7 +15,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PanelBtnComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private data : DataService
+  ) { }
 
   ngOnInit() {
   }
@@ -22,8 +25,10 @@ export class PanelBtnComponent implements OnInit {
   clk(wh: number) {
     if (wh == 1) {
       // plus click
+      this.data.incEm()
     } else {
       // minus click
+      this.data.decEm()
     }
   }
 }

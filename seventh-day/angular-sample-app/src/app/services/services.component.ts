@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-services',
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.css'],
-  providers: [DataService]
+  // providers: [DataService]
 })
 export class ServicesComponent implements OnInit {
 

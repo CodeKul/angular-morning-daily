@@ -43,7 +43,7 @@ import { PanelBtnComponent } from './inter-comp-comm-v2/panel-btn.component';
     BrowserModule,
     FormsModule
   ],
-  // providers: [DataService],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

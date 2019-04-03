@@ -1,3 +1,4 @@
+import { DataService } from './../services/data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -15,9 +16,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyProgressComponent implements OnInit {
 
-  constructor() { }
+  progress: number = 0
+  constructor(
+    private data: DataService
+  ) { }
 
   ngOnInit() {
+    this.data.onProgress(prg => {
+      this.progress = prg
+      console.log(this.progress)
+    })
   }
-
 }
