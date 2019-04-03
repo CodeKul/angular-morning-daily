@@ -1,3 +1,4 @@
+import { DataService } from './services/data.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -15,6 +16,9 @@ import { DirectivesComponent } from './directives/directives.component';
 import { DrpDirective } from './directives/drp.directive';
 import { CtmStrDirective } from './directives/ctm-str.directive';
 import { ServicesComponent } from './services/services.component';
+import { InterCompCommV2Component } from './inter-comp-comm-v2/inter-comp-comm-v2.component';
+import { MyProgressComponent } from './inter-comp-comm-v2/my-progress.component';
+import { PanelBtnComponent } from './inter-comp-comm-v2/panel-btn.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +34,16 @@ import { ServicesComponent } from './services/services.component';
     DirectivesComponent,
     DrpDirective,
     CtmStrDirective,
-    ServicesComponent
+    ServicesComponent,
+    InterCompCommV2Component,
+    MyProgressComponent,
+    PanelBtnComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  // providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
