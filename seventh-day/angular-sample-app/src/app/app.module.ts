@@ -1,3 +1,4 @@
+import { ChatService } from './services/chat.service';
 import { DataService } from './services/data.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -19,6 +20,7 @@ import { ServicesComponent } from './services/services.component';
 import { InterCompCommV2Component } from './inter-comp-comm-v2/inter-comp-comm-v2.component';
 import { MyProgressComponent } from './inter-comp-comm-v2/my-progress.component';
 import { PanelBtnComponent } from './inter-comp-comm-v2/panel-btn.component';
+import { RemoteService } from './services/remote.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,7 @@ import { PanelBtnComponent } from './inter-comp-comm-v2/panel-btn.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [DataService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

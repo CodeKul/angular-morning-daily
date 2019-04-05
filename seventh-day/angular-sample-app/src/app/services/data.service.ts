@@ -1,9 +1,21 @@
-import { EventEmitter } from '@angular/core';
+import { ChatService } from './chat.service';
+import { EventEmitter, Injectable } from '@angular/core';
+import { RemoteService } from './remote.service';
+
+@Injectable({
+  providedIn: 'root'
+})
 export class DataService {
 
   private cnt: number = 0
   private em: EventEmitter<number> = new EventEmitter()
 
+  constructor(
+    private chat: ChatService,
+    private remote: RemoteService
+  ) {
+
+  }
   inc() {
     return ++this.cnt
   }
