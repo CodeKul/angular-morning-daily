@@ -21,6 +21,11 @@ import { InterCompCommV2Component } from './inter-comp-comm-v2/inter-comp-comm-v
 import { MyProgressComponent } from './inter-comp-comm-v2/my-progress.component';
 import { PanelBtnComponent } from './inter-comp-comm-v2/panel-btn.component';
 import { RemoteService } from './services/remote.service';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ThirdPartyComponent } from './third-party/third-party.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatDatepickerModule, MatFormFieldModule, MatNativeDateModule} from '@angular/material';
+
 
 @NgModule({
   declarations: [
@@ -39,11 +44,19 @@ import { RemoteService } from './services/remote.service';
     ServicesComponent,
     InterCompCommV2Component,
     MyProgressComponent,
-    PanelBtnComponent
+    PanelBtnComponent,
+    ThirdPartyComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+
+    NgbModule,
+    BrowserAnimationsModule,
+
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
