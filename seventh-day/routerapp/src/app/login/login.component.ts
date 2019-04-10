@@ -17,6 +17,6 @@ export class LoginComponent implements OnInit {
 
   onLogin(eml: string, pass: string) {
     console.log(`Login Performed`)
-    this.router.navigate(['dash'])
+    this.router.navigate(['/dash'])
   }
 }
