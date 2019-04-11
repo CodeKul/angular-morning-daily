@@ -6,7 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component'
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'admin', component: AdminComponent },
+  { path: 'admin/:usr', component: AdminComponent },
   { path: 'dash', component: DashboardComponent }
 ]
 

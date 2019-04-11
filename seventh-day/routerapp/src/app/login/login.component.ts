@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   constructor(
-    private router : Router
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -17,6 +17,11 @@ export class LoginComponent implements OnInit {
 
   onLogin(eml: string, pass: string) {
     console.log(`Login Performed`)
-    this.router.navigate(['/dash'])
+    this.router.navigate(['/dash'], {
+      queryParams: {
+        job : 'morning',
+        schedule : 'daily'
+      }
+    })
   }
 }
