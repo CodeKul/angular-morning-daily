@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/dash'], {
       queryParams: {
         job : 'morning',
-        schedule : 'daily'
+        schedule : 'dailya'
       }
     })
   }
