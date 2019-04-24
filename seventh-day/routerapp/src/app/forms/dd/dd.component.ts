@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 
 @Component({
   selector: 'app-dd',
@@ -8,16 +8,26 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class DdComponent implements OnInit {
 
-  fg : FormGroup
+  fg: FormGroup
   constructor(
-    private fb : FormBuilder
+    private fb: FormBuilder
   ) { }
 
   ngOnInit() {
+    let emlCmps = Validators.compose([
+      Validators.required,
+      Validators.email
+    ])
+
+    let usNmCmp = Validators.compose([
+      Validators.required,
+      this.startWithA
+    ])
+
     this.fg = this.fb.group({
-      usNm : this.fb.control(['']),
-      eml : this.fb.control(['']),
-      pass : this.fb.control([''])
+      usNm: this.fb.control('', usNmCmp),
+      eml: this.fb.control('', emlCmps),
+      pass: this.fb.control('', Validators.required)
     })
     console.log(this.fg)
   }
@@ -26,4 +36,15 @@ export class DdComponent implements OnInit {
     console.log(this.fg)
   }
 
+  startWithA(ctrl: AbstractControl): ValidationErrors | null {
+    console.log(`Full ${ctrl.value} --> ${ctrl.value.charAt(0)}`);
+    
+    if(ctrl.value.charAt(0) == 'a' 
+          || ctrl.value.charAt(0) == 'A') {
+      return null
+    }
+    return {
+      isA : false
+    }
+  }
 }
