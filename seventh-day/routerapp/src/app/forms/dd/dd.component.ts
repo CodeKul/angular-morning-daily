@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-dd',
@@ -26,7 +27,7 @@ export class DdComponent implements OnInit {
 
     this.fg = this.fb.group({
       usNm: this.fb.control('', usNmCmp),
-      eml: this.fb.control('', emlCmps),
+      eml: this.fb.control('', emlCmps, this.startWithAasync),
       pass: this.fb.control('', Validators.required)
     })
     console.log(this.fg)
@@ -38,13 +39,32 @@ export class DdComponent implements OnInit {
 
   startWithA(ctrl: AbstractControl): ValidationErrors | null {
     console.log(`Full ${ctrl.value} --> ${ctrl.value.charAt(0)}`);
-    
-    if(ctrl.value.charAt(0) == 'a' 
-          || ctrl.value.charAt(0) == 'A') {
+
+    if (ctrl.value.charAt(0) == 'a'
+      || ctrl.value.charAt(0) == 'A') {
       return null
     }
     return {
-      isA : false
+      isA: true
     }
+  }
+
+  startWithAasync(ctrl: AbstractControl): Promise<ValidationErrors | null> {
+
+    function promiseFn(res, rej) {
+      function futureFn() {
+        if (ctrl.value.charAt(0) == 'a'
+          || ctrl.value.charAt(0) == 'A') {
+          res(null)
+        }
+        else {
+          let errObj = { isA: true }
+          res(errObj)
+        }
+      }
+
+      setTimeout(futureFn, 1500)
+    }
+    return new Promise(promiseFn)
   }
 }

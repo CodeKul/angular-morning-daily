@@ -12,14 +12,20 @@
               <div class="form-group">
                   <label for="inputName">Name</label>
                   <input formControlName="usNm" type="text" class="form-control" id="inputName" placeholder="Full name">
+                  <p *ngIf="fg?.controls.usNm.errors?.required">Enter Name</p>
+                  <p *ngIf="fg?.controls.usNm.errors?.isA">Name sould start from A</p>
               </div>
               <div class="form-group">
                   <label for="inputEmail3">Email</label>
                   <input formControlName="eml" type="email" class="form-control" id="inputEmail3" placeholder="Email" required="">
+                  <p *ngIf="fg?.controls.eml.errors?.required">Enter Email</p>
+                  <p *ngIf="fg?.controls.eml.errors?.email">Enter Valid Email</p>
+                  <p *ngIf="fg?.controls.eml.errors?.isA">Enter Should start from A</p>
               </div>
               <div class="form-group">
                   <label for="inputPassword3">Password</label>
                   <input formControlName="pass" type="password" class="form-control" id="inputPassword3" placeholder="Password" required="">
+                 
               </div>
               <div class="form-group">
                   <label for="inputVerify3">Verify</label>
