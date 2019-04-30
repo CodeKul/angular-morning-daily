@@ -1,3 +1,4 @@
+import { PipeComponent } from './pipe/pipe.component';
 import { FormsComponent } from './forms/forms.component';
 import { ProfleComponent } from './dashboard/profle/profle.component';
 import { FriendsComponent } from './dashboard/friends/friends.component';
@@ -26,7 +27,8 @@ const routes: Routes = [
     component: DashboardComponent,
     children: dashRoutes
   },
-  { path: 'forms', component: FormsComponent, children: formsRoutes }
+  { path: 'forms', component: FormsComponent, children: formsRoutes },
+  { path: 'pipe', component: PipeComponent }
 ]
 
 @NgModule({

@@ -12,6 +12,9 @@ import { FriendsComponent } from './dashboard/friends/friends.component';
 import { FormsComponent } from './forms/forms.component';
 import { TdComponent } from './forms/td/td.component';
 import { DdComponent } from './forms/dd/dd.component';
+import { PipeComponent } from './pipe/pipe.component';
+import { XSpacePipe } from './pipe/x-space.pipe';
+import { MobFlPipe } from './pipe/mob-fl.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { DdComponent } from './forms/dd/dd.component';
     FriendsComponent,
     FormsComponent,
     TdComponent,
-    DdComponent
+    DdComponent,
+    PipeComponent,
+    XSpacePipe,
+    MobFlPipe
   ],
   imports: [
     BrowserModule,

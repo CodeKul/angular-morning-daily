@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-12">
+    <p>Salary is {{sal | currency}}</p>
+    <p>Name is {{nm | uppercase}}</p>
+    <p>Sliced Name Is {{nm | slice:3:5 | uppercase}}</p>
+    <p>Date is {{dt | date:"dd - mm - yyyy"}}</p>
+    <p>Object is {{myObj | json}}</p>
+    <div>Spaced Name is {{nm | xSpace:3:'+'}}</div>
+    
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [(ngModel)]="fl">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div *ngFor="let mb of (mobs | mobFl:fl)">{{mb}}</div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" #mb>
+    <input type="submit" value="okay" class="btn btn-info" (click)="addMob(mb.value)">
+  </div>
+</div>
