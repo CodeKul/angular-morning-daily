@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, Subscriber } from 'rxjs';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Observable, Subscriber, Subscription } from 'rxjs';
 import { interval } from 'rxjs';
 
 @Component({
@@ -7,20 +7,27 @@ import { interval } from 'rxjs';
   templateUrl: './obs.component.html',
   styleUrls: ['./obs.component.css']
 })
-export class ObsComponent implements OnInit {
+export class ObsComponent implements OnInit, OnDestroy {
 
   runAd: Ad
+  mySub: Subscription
+  intSub: Subscription
 
   constructor() { }
 
   ngOnInit() {
-    this.myObs().subscribe(
+    this.mySub = this.myObs().subscribe(
       str => console.log(str),
       err => console.log(err),
       () => console.log(`Processing Completed`)
     )
 
     this.adObs()
+  }
+
+  ngOnDestroy() {
+    this.intSub.unsubscribe()
+    this.mySub.unsubscribe()
   }
 
   myObs(): Observable<string> {
@@ -55,7 +62,7 @@ export class ObsComponent implements OnInit {
         cmp: 'PHP'
       }
     )
-    interval(1000).subscribe(tick => {
+    this.intSub = interval(1000).subscribe(tick => {
       console.log(`Tick is ${tick}`)
 
       let ind = Math.floor(Math.random() * 3)
