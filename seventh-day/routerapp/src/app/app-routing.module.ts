@@ -1,3 +1,4 @@
+import { ObsComponent } from './obs/obs.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { FormsComponent } from './forms/forms.component';
 import { ProfleComponent } from './dashboard/profle/profle.component';
@@ -28,7 +29,8 @@ const routes: Routes = [
     children: dashRoutes
   },
   { path: 'forms', component: FormsComponent, children: formsRoutes },
-  { path: 'pipe', component: PipeComponent }
+  { path: 'pipe', component: PipeComponent },
+  { path: 'obs', component: ObsComponent }
 ]
 
 @NgModule({

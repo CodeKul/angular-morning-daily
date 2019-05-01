@@ -15,6 +15,7 @@ import { DdComponent } from './forms/dd/dd.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { XSpacePipe } from './pipe/x-space.pipe';
 import { MobFlPipe } from './pipe/mob-fl.pipe';
+import { ObsComponent } from './obs/obs.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MobFlPipe } from './pipe/mob-fl.pipe';
     DdComponent,
     PipeComponent,
     XSpacePipe,
-    MobFlPipe
+    MobFlPipe,
+    ObsComponent
   ],
   imports: [
     BrowserModule,
