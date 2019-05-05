@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-12">
+    <input type="button" value="Okay" class="btn btn-primary" (click)="getUsers()">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div *ngFor="let us of usersRes?.data">
+      <p> {{us.first_name}} {{us.last_name}}</p>
+      <img [src]="us.avatar" [alt]="us.first_name" width="80" height="80">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" #fnm>
+    <input type="text" #lnm>
+    <input type="text" #av>
+    <input type="button" value="Save" class="btn btn-primary" (click)="saveUser(fnm.value,lnm.value,av.value)">
+    <p *ngIf="isSc" class="alert alert-success">User Saved Successfully {{usr | json}}</p>
+  </div>
+</div>

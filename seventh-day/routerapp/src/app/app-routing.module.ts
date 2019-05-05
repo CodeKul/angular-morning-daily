@@ -1,3 +1,4 @@
+import { HttpComponent } from './http/http.component';
 import { ObsComponent } from './obs/obs.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { FormsComponent } from './forms/forms.component';
@@ -30,7 +31,8 @@ const routes: Routes = [
   },
   { path: 'forms', component: FormsComponent, children: formsRoutes },
   { path: 'pipe', component: PipeComponent },
-  { path: 'obs', component: ObsComponent }
+  { path: 'obs', component: ObsComponent },
+  { path: 'http', component: HttpComponent }
 ]
 
 @NgModule({
